@@ -28,12 +28,9 @@ data = {
 }
 
 #json.dumps() method turns a Python data structure into JSON:
-jsonData = json.dumps(data)
+jsonData = json.dumps(data, indent=4)
 print(jsonData)
 
 # Writing JSON data into a file called JSONData.json
-#Use the method called json.dump()
-#It's just dump() and not dumps()
-#Encode JSON data
-with open('JSONData.json', 'w') as f:
-     json.dump(jsonData, f)
+outputFile = open("JSONData.json", "w+")
+	outputFile.write(jsonData)
